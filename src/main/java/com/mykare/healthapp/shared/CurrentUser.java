@@ -8,6 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * <p>an annotation for user</p>
  * @author vishnu.kp
  * @version 1.04
  * @since 18 JUn,2022

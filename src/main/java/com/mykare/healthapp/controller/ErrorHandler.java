@@ -12,6 +12,7 @@ import org.springframework.web.context.request.WebRequest;
 import java.util.Map;
 
 /**
+ * The controller clas used for error handling
  * @author vishnu.kp
  * @version 1.0
  * @since 18 June ,2022s
@@ -26,7 +27,6 @@ public class ErrorHandler implements ErrorController
 
     @Autowired
     private ErrorAttributes errorAttributes;
-
     /**
      * @author vishnu.kp
      * @param webRequest the web request
@@ -42,7 +42,6 @@ public class ErrorHandler implements ErrorController
         final String Url = (String) attributeMap.get(PATH);
         return new ApiError(status, message, Url);
     }
-
     public String getErrorPath()
     {
         return ERROR_URL;

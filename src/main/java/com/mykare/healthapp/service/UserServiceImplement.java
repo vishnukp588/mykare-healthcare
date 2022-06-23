@@ -14,6 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
+ * <p>this is a service class for User service</p>
  * @author
  * @version 1.0
  * @since 15 Jun,2022
@@ -59,6 +60,7 @@ public class UserServiceImplement implements UserService
     }
 
     /**
+     * <p>list out all registered users</p>
      * @author vishnu.kp
      * @since 15 Jun,2022
      * @return list of user if present in database, otherwise empty
@@ -72,7 +74,12 @@ public class UserServiceImplement implements UserService
         return new ArrayList<>();
 
     }
-
+    /**
+     * <p>for checking the user is existing in db</p>
+     * @author vishnu.kp
+     * @since 15 Jun,2022
+     * @return true only user's email id is present in database
+     */
     private Boolean isRegisteredUser(String email)
     {
         final User userInDb = userRepository.findByEmail(email);
@@ -80,7 +87,12 @@ public class UserServiceImplement implements UserService
             return true;
         return false;
     }
-
+    /**
+     * <p>for removing the user details on the basis of email id</p>
+     * @author vishnu.kp
+     * @since 15 Jun,2022
+     * @return true if a email id is present in the database and removed or false
+     */
     @Override
     public Boolean removeUser(String email)
     {

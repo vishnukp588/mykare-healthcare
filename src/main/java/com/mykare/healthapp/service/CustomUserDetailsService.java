@@ -8,12 +8,24 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+/**
+ * <p>This class for implementing the user details Service and check for user is valid</p>
+ * @author vishnu.kp
+ * @version 1.0
+ * @since 18 Jun,2022
+ */
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
 
+    /**
+     * @author vishnu.kp
+     * @param username the username, here email as username
+     * @returna valid user
+     * @throws UsernameNotFoundException if user not found in database
+     */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user=userRepository.findByEmail(username);

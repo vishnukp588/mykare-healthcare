@@ -3,10 +3,8 @@ package com.mykare.healthapp.error;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.util.Date;
 import java.util.Map;
-
 /**
  *
  * this is for common error response
@@ -17,7 +15,8 @@ import java.util.Map;
 @Data
 @NoArgsConstructor
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
-public class ApiError {
+public class ApiError
+{
     private long timeStamp=new Date().getTime();
 
     private int status;
@@ -28,7 +27,8 @@ public class ApiError {
 
     private Map<String,String>errorMap;
 
-    public ApiError(int status, String message, String url) {
+    public ApiError(int status, String message, String url)
+    {
         super();
         this.status = status;
         this.message = message;

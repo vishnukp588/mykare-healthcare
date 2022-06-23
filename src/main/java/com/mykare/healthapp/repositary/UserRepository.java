@@ -24,5 +24,4 @@ public interface UserRepository extends JpaRepository<User,Long>
      * @return a valid user if it exists in database
      */
     User findByEmail(String email);
-
 }

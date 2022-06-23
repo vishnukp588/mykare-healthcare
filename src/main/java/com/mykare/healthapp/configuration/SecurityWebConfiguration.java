@@ -12,6 +12,11 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+/**
+ * @author vishnu.kp
+ * @version 1.0s
+ * @since 15 June,2022
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityWebConfiguration extends WebSecurityConfigurerAdapter {
