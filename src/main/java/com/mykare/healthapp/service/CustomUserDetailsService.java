@@ -22,8 +22,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     /**
      * @author vishnu.kp
-     * @param username the username, here email as username
-     * @returna valid user
+     * @param username the user name, here email as user name
+     * @return a valid user
      * @throws UsernameNotFoundException if user not found in database
      */
     @Override
